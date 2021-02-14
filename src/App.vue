@@ -1,27 +1,38 @@
 <template>
-  <div id="app">
-    <HelloWorld />
-  </div>
+  <v-app>
+    <v-card height="100%">
+
+      <NavBar />
+
+      <div class="mainContent">
+        <v-main>
+          <Main/>
+        </v-main>
+      </div>
+
+    </v-card>
+  </v-app>
+
 </template>
 
+<style>
+  @import './stylesheets/layout.css';
+</style>
+
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Main from './components/Main';
+import NavBar from "./components/NavBar";
 
 export default {
-  name: "App",
+  name: 'App',
+
   components: {
-    HelloWorld
-  }
+    NavBar,
+    Main,
+  },
+
+  data: () => ({
+    //
+  }),
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
