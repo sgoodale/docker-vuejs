@@ -16,7 +16,7 @@
 </template>
 
 <style>
-  @import './stylesheets/layout.css';
+  @import 'stylesheets/app.css';
 </style>
 
 <script>

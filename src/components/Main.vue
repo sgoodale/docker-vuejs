@@ -1,22 +1,21 @@
 <template>
   <div>
 
-    <v-card class="mb-8">
-      <v-toolbar flat>
-        <v-toolbar-title>Narrow by region</v-toolbar-title>
+    <v-toolbar flat class="mt-8 mb-12 mt-sm-0 mb-sm-4">
+      <v-row>
+        <v-col cols="12" sm="8" md="9">
+          <v-toolbar-title>Dashboard Title</v-toolbar-title>
+        </v-col>
         <v-spacer></v-spacer>
-        <v-col
-                class="d-flex"
-                cols="12"
-                sm="6"
-        >
+        <v-col cols="12" sm="4" md="3">
           <v-select
                   :items="regions"
                   label="Select region"
+                  class="region-selector mb-0"
           ></v-select>
         </v-col>
-      </v-toolbar>
-    </v-card>
+      </v-row>
+    </v-toolbar>
 
     <Section>
       <CardRow
@@ -72,6 +71,10 @@
 
   </div>
 </template>
+
+<style>
+  @import '../stylesheets/main.css';
+</style>
 
 <script>
   import Section from "../partials/Section";
